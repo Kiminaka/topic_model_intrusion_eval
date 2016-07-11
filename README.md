@@ -21,8 +21,8 @@ Word/Topic Intrusion Evaluation for Gensim LDA!
 
 ## Model and Data format
 Create model and data with the required formats shown below. See the example data in the `data` directory. 
-- `model/stem_topic12.gensim`: the default model for this module is a [Gensim LDA model](https://radimrehurek.com/gensim/models/ldamodel.html). You can store the model by `model.save(<filename.gensim>)`. When you store the model, it will also produce `.gensim.state` file and make sure you include the file in the same directory.
-- `model/stem_topic12.dict`: you can save the Gensim dictionary by `dictionary.save(<filename.dict>)`. 
+- `model/your_model.gensim`: the default model for this module is a [Gensim LDA model](https://radimrehurek.com/gensim/models/ldamodel.html). You can store the model by `model.save(<filename.gensim>)`. When you store the model, it will also produce `.gensim.state` file and make sure you include the file in the same directory.
+- `model/your_dictionary.dict`: you can save the Gensim dictionary by `dictionary.save(<filename.dict>)`. 
 - `docs.csv`: each row is a document or message. 
 - `wi/word_intrusion_user_set.csv`: wi represents word intrusion. Each row is the word that an evaluater selects as an intruder word.
 - `ti/user/x.json`: (when `ti_choice = 'not_reusable_but_debuggable'` in `config.py`) ti represents topic intrusion. Each json file represents the topics for corresponding order number (x) of a document. Inside the json file, the meaning of key and value is `{<topic id>:[<words for the topic>]}`. That's the topic and corresponding words that an evaluator selects as an intruder topic. 
