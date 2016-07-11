@@ -18,6 +18,7 @@ Word/Topic Intrusion Evaluation for Gensim LDA!
 - There are two ways to evaluate a model; (1) reusable and (2) non-reusable way.
 - With (1), you can reuse the training data from evaluators for other models. With (2), the data includes words for each topic and the combination of words is unique to each set. When you want to evaluate your model deeper, (2) will show you how the model picks words for each topics or see if evaluators agree looking at the words for each topic instead of the manually given names for each topic (exercise, recipe etc). In this sense, (2) is a harder evaluation method for models. 
 - Select an option in `config.py`. (Follow the comments)
+- Note: sometimes you will see only one topic choice for a document (especailly if you merge similar topics together). This case happens when the probability of the topic is close to 1 and there is no probablity assignment to other topics. However, since topic intruder needs to pick the topic with lowest probability (but cannot be zero), it will have to pick the only topic which has the highest probability nearly equal to 1. Therefore, evaluators should treat the case as exception and think of the topic option as the "right topic" instead of a wrong topic, intruder. You could fix the issue by assigning a really small number (but not zero) but since it's more art to decide what the small number should be. So, I'll let users to pick the number.
 
 ## Model and Data format
 Create model and data with the required formats shown below. See the example data in the `data` directory. 
