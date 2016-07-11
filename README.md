@@ -1,7 +1,7 @@
 Word/Topic Intrusion Evaluation for Gensim LDA!
 =========
 
-- This module is an implementation of a topic model evaluation method from [Reading Tea Leaves: How Humans Interpret Topic Models](http://www.umiacs.umd.edu/~jbg/docs/nips2009-rtl.pdf). The method is introduced by experts at Princeton, Facebook and University of Maryland in 2009. 
+- This module is an implementation (+ some additional functions) of a topic model evaluation method from [Reading Tea Leaves: How Humans Interpret Topic Models](http://www.umiacs.umd.edu/~jbg/docs/nips2009-rtl.pdf). The method is introduced by experts at Princeton, Facebook and University of Maryland in 2009. 
 - This module creates necessary datasets and calculate word intrusion precision, topic intrusion log odds and topic intrusion precision.
 - This module is built with Python 3.
 
